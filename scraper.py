@@ -4,7 +4,10 @@ import re
 import sys
 
 # load urls
-f = open(sys.argv[1])
+if len(sys.argv) == 2:
+    f = open(sys.argv[1])
+else:
+    f = open('urls.txt')
 
 listOfUrls = [line for line in f]
 
